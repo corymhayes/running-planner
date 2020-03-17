@@ -201,7 +201,7 @@ const Home = ({ data }, props) => {
 //   return { data }
 // }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const res = await fetch('http://localhost:3000/api/daily')
   const data = await res.json()
 
