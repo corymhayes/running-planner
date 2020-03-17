@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -127,65 +127,10 @@ const Layout = props => __jsx("div", {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "core-js/library/fn/object/define-property");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/weak-map.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/weak-map.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
-  \******************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -199,24 +144,18 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js ***!
-  \*******************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _Object$getOwnPropertyDescriptor = __webpack_require__(/*! ../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-
-var _Object$defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js");
-
-var _WeakMap = __webpack_require__(/*! ../core-js/weak-map */ "./node_modules/@babel/runtime-corejs2/core-js/weak-map.js");
+var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
 
 function _getRequireWildcardCache() {
-  if (typeof _WeakMap !== "function") return null;
-  var cache = new _WeakMap();
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
 
   _getRequireWildcardCache = function _getRequireWildcardCache() {
     return cache;
@@ -243,14 +182,14 @@ function _interopRequireWildcard(obj) {
   }
 
   var newObj = {};
-  var hasPropertyDescriptor = _Object$defineProperty && _Object$getOwnPropertyDescriptor;
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
 
   for (var key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? _Object$getOwnPropertyDescriptor(obj, key) : null;
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
 
       if (desc && (desc.get || desc.set)) {
-        _Object$defineProperty(newObj, key, desc);
+        Object.defineProperty(newObj, key, desc);
       } else {
         newObj[key] = obj[key];
       }
@@ -270,27 +209,23 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
-  \***************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var _Symbol$iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
-
-var _Symbol = __webpack_require__(/*! ../core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
-
-function _typeof2(obj) { if (typeof _Symbol === "function" && typeof _Symbol$iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
-  if (typeof _Symbol === "function" && _typeof2(_Symbol$iterator) === "symbol") {
+  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
     module.exports = _typeof = function _typeof(obj) {
       return _typeof2(obj);
     };
   } else {
     module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : _typeof2(obj);
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
     };
   }
 
@@ -311,20 +246,20 @@ module.exports = _typeof;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _url = __webpack_require__(/*! url */ "url");
-
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
-var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
+var _url = __webpack_require__(/*! url */ "url");
 
 var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+
+var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
 
 function isLocal(href) {
   var url = (0, _url.parse)(href, false, true);
@@ -423,7 +358,6 @@ class Link extends _react.Component {
     });
 
     this.linkClicked = e => {
-      // @ts-ignore target exists on currentTarget
       var {
         nodeName,
         target
@@ -485,21 +419,23 @@ class Link extends _react.Component {
     this.cleanUpListeners();
   }
 
-  getHref() {
+  getPaths() {
     var {
       pathname
     } = window.location;
     var {
-      href: parsedHref
+      href: parsedHref,
+      as: parsedAs
     } = this.formatUrls(this.props.href, this.props.as);
-    return (0, _url.resolve)(pathname, parsedHref);
+    var resolvedHref = (0, _url.resolve)(pathname, parsedHref);
+    return [resolvedHref, parsedAs ? (0, _url.resolve)(pathname, parsedAs) : resolvedHref];
   }
 
   handleRef(ref) {
-    var isPrefetched = prefetched[this.getHref()];
-
     if (this.p && IntersectionObserver && ref && ref.tagName) {
       this.cleanUpListeners();
+      var isPrefetched = prefetched[this.getPaths().join( // Join on an invalid URI character
+      '%')];
 
       if (!isPrefetched) {
         this.cleanUpListeners = listenToIntersections(ref, () => {
@@ -511,14 +447,26 @@ class Link extends _react.Component {
   // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 
 
-  prefetch() {
+  prefetch(options) {
     if (!this.p || true) return; // Prefetch the JSON page if asked (only in the client)
 
-    var href = this.getHref();
+    var paths = this.getPaths(); // We need to handle a prefetch error here since we may be
+    // loading with priority which can reject but we don't
+    // want to force navigation since this is only a prefetch
 
-    _router.default.prefetch(href);
+    _router.default.prefetch(paths[
+    /* href */
+    0], paths[
+    /* asPath */
+    1], options).catch(err => {
+      if (true) {
+        // rethrow to show invalid URL errors
+        throw err;
+      }
+    });
 
-    prefetched[href] = true;
+    prefetched[paths.join( // Join on an invalid URI character
+    '%')] = true;
   }
 
   render() {
@@ -552,7 +500,9 @@ class Link extends _react.Component {
           child.props.onMouseEnter(e);
         }
 
-        this.prefetch();
+        this.prefetch({
+          priority: true
+        });
       },
       onClick: e => {
         if (child.props && typeof child.props.onClick === 'function') {
@@ -622,9 +572,9 @@ exports.default = _default;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
@@ -658,7 +608,7 @@ var singletonRouter = {
 
 }; // Create public properties and methods of the router in the singletonRouter
 
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
+var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -784,7 +734,7 @@ function makePublicRouterInstance(router) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.default = withRouter;
@@ -930,13 +880,64 @@ const route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node
 const route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
 function addBasePath(path) {
-  // @ts-ignore variable is always a string
+  // variable is always a string
   const p = "";
   return path.indexOf(p) !== 0 ? p + path : path;
 }
 
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
+}
+
+const prepareRoute = path => toRoute(!path || path === '/' ? '/index' : path);
+
+function fetchNextData(pathname, query, isServerRender, cb) {
+  let attempts = isServerRender ? 3 : 1;
+
+  function getResponse() {
+    return fetch(utils_1.formatWithValidation({
+      // @ts-ignore __NEXT_DATA__
+      pathname: `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`,
+      query
+    }), {
+      // Cookies are required to be present for Next.js' SSG "Preview Mode".
+      // Cookies may also be required for `getServerSideProps`.
+      //
+      // > `fetch` won’t send cookies, unless you set the credentials init
+      // > option.
+      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+      //
+      // > For maximum browser compatibility when it comes to sending &
+      // > receiving cookies, always supply the `credentials: 'same-origin'`
+      // > option instead of relying on the default.
+      // https://github.com/github/fetch#caveats
+      credentials: 'same-origin'
+    }).then(res => {
+      if (!res.ok) {
+        if (--attempts > 0 && res.status >= 500) {
+          return getResponse();
+        }
+
+        throw new Error(`Failed to load static props`);
+      }
+
+      return res.json();
+    });
+  }
+
+  return getResponse().then(data => {
+    return cb ? cb(data) : data;
+  }).catch(err => {
+    // We should only trigger a server-side transition if this was caused
+    // on a client-side transition. Otherwise, we'd get into an infinite
+    // loop.
+    if (!isServerRender) {
+      ;
+      err.code = 'PAGE_LOAD_ERROR';
+    }
+
+    throw err;
+  });
 }
 
 class Router {
@@ -947,7 +948,8 @@ class Router {
     wrapApp,
     Component,
     err,
-    subscription
+    subscription,
+    isFallback
   }) {
     // Static Data Cache
     this.sdc = {};
@@ -976,7 +978,7 @@ class Router {
       // can be caused by navigating back from an external site
 
 
-      if (e.state && this.isSsr && e.state.url === this.pathname && e.state.as === this.asPath) {
+      if (e.state && this.isSsr && e.state.as === this.asPath && url_1.parse(e.state.url).pathname === this.pathname) {
         return;
       } // If the downstream application returns falsy, return.
       // They will then be responsible for handling the event.
@@ -1001,24 +1003,18 @@ class Router {
       this.replace(url, as, options);
     };
 
-    this._getStaticData = (asPath, _cachedData) => {
-      let pathname = url_1.parse(asPath).pathname;
-      pathname = toRoute(!pathname || pathname === '/' ? '/index' : pathname);
-      return  false ? undefined : fetch( // @ts-ignore __NEXT_DATA__
-      `/_next/data/${__NEXT_DATA__.buildId}${pathname}.json`).then(res => {
-        if (!res.ok) {
-          throw new Error(`Failed to load static props`);
-        }
+    this._getStaticData = asPath => {
+      const pathname = prepareRoute(url_1.parse(asPath).pathname);
+      return  false ? undefined : fetchNextData(pathname, null, this.isSsr, data => this.sdc[pathname] = data);
+    };
 
-        return res.json();
-      }).then(data => {
-        this.sdc[pathname] = data;
-        return data;
-      }).catch(err => {
-        ;
-        err.code = 'PAGE_LOAD_ERROR';
-        throw err;
-      });
+    this._getServerData = asPath => {
+      let {
+        pathname,
+        query
+      } = url_1.parse(asPath, true);
+      pathname = prepareRoute(pathname);
+      return fetchNextData(pathname, query, this.isSsr);
     }; // represents the current component key
 
 
@@ -1032,7 +1028,9 @@ class Router {
       this.components[this.route] = {
         Component,
         props: initialProps,
-        err
+        err,
+        __N_SSG: initialProps && initialProps.__N_SSG,
+        __N_SSP: initialProps && initialProps.__N_SSP
       };
     }
 
@@ -1040,7 +1038,6 @@ class Router {
       Component: App
     }; // Backwards compat for Router.router.events
     // TODO: Should be remove the following major version as it was never documented
-    // @ts-ignore backwards compatibility
 
     this.events = Router.events;
     this.pageLoader = pageLoader;
@@ -1056,6 +1053,7 @@ class Router {
     // back from external site
 
     this.isSsr = true;
+    this.isFallback = isFallback;
 
     if (false) {}
   } // @deprecated backwards compatibility even though it's a private method.
@@ -1076,7 +1074,9 @@ class Router {
     }
 
     const newData = Object.assign(Object.assign({}, data), {
-      Component
+      Component,
+      __N_SSG: mod.__N_SSG,
+      __N_SSP: mod.__N_SSP
     });
     this.components[route] = newData; // pages/_app.js updated
 
@@ -1179,8 +1179,7 @@ class Router {
 
       if (!this.urlIsNew(as)) {
         method = 'replaceState';
-      } // @ts-ignore pathname is always a string
-
+      }
 
       const route = toRoute(pathname);
       const {
@@ -1211,7 +1210,6 @@ class Router {
       }
 
       Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
-      // @ts-ignore pathname is always a string
 
       this.getRouteInfo(route, pathname, query, as, shallow).then(routeInfo => {
         const {
@@ -1224,17 +1222,13 @@ class Router {
 
         Router.events.emit('beforeHistoryChange', as);
         this.changeState(method, url, addBasePath(as), options);
-        const hash = window.location.hash.substring(1);
 
         if (true) {
           const appComp = this.components['/_app'].Component;
           window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
-        } // @ts-ignore pathname is always defined
+        }
 
-
-        this.set(route, pathname, query, as, Object.assign(Object.assign({}, routeInfo), {
-          hash
-        }));
+        this.set(route, pathname, query, as, routeInfo);
 
         if (error) {
           Router.events.emit('routeChangeError', error, as);
@@ -1252,8 +1246,7 @@ class Router {
       if (typeof window.history === 'undefined') {
         console.error(`Warning: window.history is not available.`);
         return;
-      } // @ts-ignore method should always exist on history
-
+      }
 
       if (typeof window.history[method] === 'undefined') {
         console.error(`Warning: window.history.${method} is not available`);
@@ -1262,12 +1255,14 @@ class Router {
     }
 
     if (method !== 'pushState' || utils_1.getURL() !== as) {
-      // @ts-ignore method should always exist on history
       window.history[method]({
         url,
         as,
         options
-      }, null, as);
+      }, // Most browsers currently ignores this parameter, although they may use it in the future.
+      // Passing the empty string here should be safe against future changes to the method.
+      // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+      '', as);
     }
   }
 
@@ -1279,42 +1274,9 @@ class Router {
       return Promise.resolve(cachedRouteInfo);
     }
 
-    return new Promise((resolve, reject) => {
-      if (cachedRouteInfo) {
-        return resolve(cachedRouteInfo);
-      }
-
-      this.fetchComponent(route).then(Component => resolve({
-        Component
-      }), reject);
-    }).then(routeInfo => {
-      const {
-        Component
-      } = routeInfo;
-
-      if (true) {
-        const {
-          isValidElementType
-        } = __webpack_require__(/*! react-is */ "react-is");
-
-        if (!isValidElementType(Component)) {
-          throw new Error(`The default export is not a React Component in page: "${pathname}"`);
-        }
-      }
-
-      return this._getData(() => Component.__N_SSG ? this._getStaticData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
-      {
-        pathname,
-        query,
-        asPath: as
-      })).then(props => {
-        routeInfo.props = props;
-        this.components[route] = routeInfo;
-        return routeInfo;
-      });
-    }).catch(err => {
+    const handleError = (err, loadErrorFail) => {
       return new Promise(resolve => {
-        if (err.code === 'PAGE_LOAD_ERROR') {
+        if (err.code === 'PAGE_LOAD_ERROR' || loadErrorFail) {
           // If we can't load the page it could be one of following reasons
           //  1. Page doesn't exists
           //  2. Page does exist in a different zone
@@ -1337,7 +1299,10 @@ class Router {
           });
         }
 
-        resolve(this.fetchComponent('/_error').then(Component => {
+        resolve(this.fetchComponent('/_error').then(res => {
+          const {
+            page: Component
+          } = res;
           const routeInfo = {
             Component,
             err
@@ -1358,12 +1323,52 @@ class Router {
               resolve(routeInfo);
             });
           });
-        }));
+        }).catch(err => handleError(err, true)));
       });
-    });
+    };
+
+    return new Promise((resolve, reject) => {
+      if (cachedRouteInfo) {
+        return resolve(cachedRouteInfo);
+      }
+
+      this.fetchComponent(route).then(res => resolve({
+        Component: res.page,
+        __N_SSG: res.mod.__N_SSG,
+        __N_SSP: res.mod.__N_SSP
+      }), reject);
+    }).then(routeInfo => {
+      const {
+        Component,
+        __N_SSG,
+        __N_SSP
+      } = routeInfo;
+
+      if (true) {
+        const {
+          isValidElementType
+        } = __webpack_require__(/*! react-is */ "react-is");
+
+        if (!isValidElementType(Component)) {
+          throw new Error(`The default export is not a React Component in page: "${pathname}"`);
+        }
+      }
+
+      return this._getData(() => __N_SSG ? this._getStaticData(as) : __N_SSP ? this._getServerData(as) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
+      {
+        pathname,
+        query,
+        asPath: as
+      })).then(props => {
+        routeInfo.props = props;
+        this.components[route] = routeInfo;
+        return routeInfo;
+      });
+    }).catch(handleError);
   }
 
   set(route, pathname, query, as, data) {
+    this.isFallback = false;
     this.route = route;
     this.pathname = pathname;
     this.query = query;
@@ -1430,13 +1435,14 @@ class Router {
     return this.asPath !== asPath;
   }
   /**
-   * Prefetch `page` code, you may wait for the data during `page` rendering.
+   * Prefetch page code, you may wait for the data during page rendering.
    * This feature only works in production!
-   * @param url of prefetched `page`
+   * @param url the href of prefetched page
+   * @param asPath the as path of the prefetched page
    */
 
 
-  prefetch(url) {
+  prefetch(url, asPath = url, options = {}) {
     return new Promise((resolve, reject) => {
       const {
         pathname,
@@ -1454,11 +1460,9 @@ class Router {
 
       if (true) {
         return;
-      } // @ts-ignore pathname is always defined
+      }
 
-
-      const route = toRoute(pathname);
-      this.pageLoader.prefetch(route).then(resolve, reject);
+      Promise.all([this.pageLoader.prefetchData(url, asPath), this.pageLoader[options.priority ? 'loadPage' : 'prefetch'](toRoute(pathname))]).then(() => resolve(), reject);
     });
   }
 
@@ -1469,7 +1473,7 @@ class Router {
       cancelled = true;
     };
 
-    const Component = await this.pageLoader.loadPage(route);
+    const componentResult = await this.pageLoader.loadPage(route);
 
     if (cancelled) {
       const error = new Error(`Abort fetching component for route: "${route}"`);
@@ -1481,7 +1485,7 @@ class Router {
       this.clc = null;
     }
 
-    return Component;
+    return componentResult;
   }
 
   _getData(fn) {
@@ -1802,11 +1806,12 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 /*!************************!*\
   !*** ./pages/index.js ***!
   \************************/
-/*! exports provided: default */
+/*! exports provided: getStaticProps, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -1893,10 +1898,24 @@ const Home = ({
       lineNumber: 36
     },
     __self: undefined
-  }, "HELLO"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "HELLO"), __jsx("div", {
+    className: "jsx-1357465073" + " " + "week-header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("h1", {
+    className: "jsx-1357465073",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, data[`week${weekNum}`].label)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1357465073",
     __self: undefined
-  }, ".container.jsx-1357465073{height:100%;width:100%;padding-top:5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:sans-serif;}.week-header.jsx-1357465073{font-size:4rem;margin:0 0 3rem 0;padding:0;}.week-header.jsx-1357465073 h1.jsx-1357465073{height:100%;width:100%;margin:0;padding:0;font-weight:1000;}.exercise-grid.jsx-1357465073{display:grid;grid-template-columns:25% 50% 25%;width:100%;}.prev-button.jsx-1357465073,.next-button.jsx-1357465073{font-size:5rem;font-weight:100;}.prev-button.jsx-1357465073{justify-self:end;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;grid-column:1;}.next-button.jsx-1357465073{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;grid-column:3;}.dummy-container.jsx-1357465073{grid-column:2;display:grid;grid-template-rows:repeat(7,14.25%);}.details-container.jsx-1357465073{display:grid;grid-template-columns:1fr 1fr;margin:0 0 3rem 0;}.tag-guide.jsx-1357465073{display:grid;grid-template-rows:35% 125%;}.tag-line.jsx-1357465073{height:100%;width:1px;background-color:#c3c3c3;place-self:end;margin-right:.3rem;}.tag-line-last.jsx-1357465073{display:hidden;}.day-exercise.jsx-1357465073{margin-left:2.5rem;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}.day-exercise.jsx-1357465073 h1.jsx-1357465073{margin:0;font-size:2rem;line-height:10px;}.tag-dot.jsx-1357465073{-webkit-align-self:start;-ms-flex-item-align:start;align-self:start;justify-self:end;height:10px;width:10px;border-radius:100px;}.rest.jsx-1357465073{background-color:cyan;}.run.jsx-1357465073{background-color:red;}.cross.jsx-1357465073{background-color:yellow;}.crossrun.jsx-1357465073{background-color:orange;}.other.jsx-1357465073{background-color:black;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jb3ItZWVlL1Byb2plY3RzL3J1bi1zY2hlZHVsZS9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUE0RWtCLEFBR3VCLEFBV0csQUFNSCxBQVFDLEFBT0UsQUFLRSxBQU1DLEFBS0osQUFNRCxBQU1BLEFBS0QsQUFRRyxBQUlJLEFBS1YsQUFPUSxBQU9LLEFBR0QsQUFHRyxBQUdBLEFBR0QsU0F6QlIsR0FsRkosQUFpQkEsQUFnREQsQ0F4Q3dCLEFBNkJKLEFBTUYsQ0FaZixDQXJDSyxBQXFCRixBQXlDbEIsRUFwQ29CLEVBd0NBLEVBc0JwQixDQWpDMkIsQUE4QjNCLENBL0ZtQixBQWlCUixBQTBGWCxDQXpCbUIsQUFtQm5CLEFBR0EsR0F4RHVDLElBaEJ2QyxDQWRZLENBUEEsT0FWRyxDQTJEZixBQXVCQSxDQWhFbUIsQ0FQbkIsQUEwQ29CLElBN0JQLEFBeUNJLFdBeENqQixDQU5BLEVBbUNBLENBWXFCLENBbEJyQixLQXVDbUIsR0E5Q0gsVUEwQmhCLElBekJBLEFBOENjLEdBcERFLEVBd0NoQixPQWFhLEtBcERiLE1BcURzQixNQXpGSCxjQTBGbkIsaURBekZ5QixtR0FDSiw2RkFDSSx1QkFDekIiLCJmaWxlIjoiL1VzZXJzL2Nvci1lZWUvUHJvamVjdHMvcnVuLXNjaGVkdWxlL3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnXG5pbXBvcnQgZmV0Y2ggZnJvbSAnaXNvbW9ycGhpYy11bmZldGNoJ1xuaW1wb3J0IExheW91dCBmcm9tICcuLi9jb21wb25lbnRzL0xheW91dCdcblxuY29uc3QgSG9tZSA9ICh7IGRhdGEgfSwgcHJvcHMpID0+IHtcbiAgY29uc3QgW3dlZWtOdW0sIHNldFdlZWtOdW1dID0gdXNlU3RhdGUoMSlcblxuICBjb25zdCBuZXh0V2VlayA9ICgpID0+IHtcbiAgICBpZih3ZWVrTnVtIDwgMTIpe1xuICAgICAgc2V0V2Vla051bSh3ZWVrTnVtID0+IHdlZWtOdW0gKz0gMSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHNldFdlZWtOdW0oMTIpO1xuICAgIH1cbiAgfVxuXG4gIGNvbnN0IHByZXZXZWVrID0gKCkgPT4ge1xuICAgIGlmKHdlZWtOdW0gPiAxKXtcbiAgICAgIHNldFdlZWtOdW0od2Vla051bSA9PiB3ZWVrTnVtIC09IDEpO1xuICAgIH0gZWxzZSB7XG4gICAgICBzZXRXZWVrTnVtKDEpXG4gICAgfVxuICB9XG5cbiAgcmV0dXJuKFxuICAgIDxMYXlvdXQ+XG5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuXG4gICAgICA8SGVhZD5cbiAgICAgICAgPHRpdGxlPldlZWsgMTwvdGl0bGU+XG4gICAgICAgIDxsaW5rIHJlbD1cImljb25cIiBocmVmPVwiXCIgLz5cbiAgICAgIDwvSGVhZD5cblxuICAgICAgPGgxPkhFTExPPC9oMT5cblxuXG4gICAgICB7LyogPGRpdiBjbGFzc05hbWU9XCJ3ZWVrLWhlYWRlclwiPlxuICAgICAgICA8aDE+e2RhdGFbYHdlZWske3dlZWtOdW19YF0ubGFiZWx9PC9oMT5cbiAgICAgIDwvZGl2PiAqL31cblxuXG4gICAgICB7LyogPGRpdiBjbGFzc05hbWU9XCJleGVyY2lzZS1ncmlkXCI+XG4gICAgICAgIDxkaXYgb25DbGljaz17cHJldldlZWt9IGNsYXNzTmFtZT1cInByZXYtYnV0dG9uXCI+Jmx0OzwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImR1bW15LWNvbnRhaW5lclwiPlxuICAgICAgICAgIHtcbiAgICAgICAgICAgIE9iamVjdC52YWx1ZXMoZGF0YVtgd2VlayR7d2Vla051bX1gXSkuc2xpY2UoMCw3KS5tYXAoKGZvbywgaSkgPT4gKFxuICAgICAgICAgICAgICA8ZGl2IGtleT17aX0gY2xhc3NOYW1lPVwiZGV0YWlscy1jb250YWluZXJcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZy1ndWlkZVwiPlxuICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBmb28udGFnID09PSAncmVzdCcgPyBcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0YWctZG90IHJlc3RcIj48L2Rpdj4gOiBcbiAgICAgICAgICAgICAgICAgICAgZm9vLnRhZyA9PT0gJ3J1bicgP1xuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZy1kb3QgcnVuXCI+PC9kaXY+IDpcbiAgICAgICAgICAgICAgICAgICAgZm9vLnRhZyA9PT0gJ2Nyb3NzJyA/IFxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZy1kb3QgY3Jvc3NcIj48L2Rpdj4gOlxuICAgICAgICAgICAgICAgICAgICBmb28udGFnID09PSAnY3Jvc3NydW4nID8gXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGFnLWRvdCBjcm9zc3J1blwiPjwvZGl2PiA6XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGFnLWRvdCBvdGhlclwiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17aSA8IDYgPyAndGFnLWxpbmUnIDogJ3RhZy1saW5lLWxhc3QnfT48L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkYXktZXhlcmNpc2VcIj5cbiAgICAgICAgICAgICAgICAgIDxoMT57Zm9vLmxhYmVsfSAtIHtmb28ucmFjZURheX08L2gxPlxuICAgICAgICAgICAgICAgICAgPHA+e2Zvby5leGVyY2lzZX08L3A+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgKSlcbiAgICAgICAgICB9XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IG9uQ2xpY2s9e25leHRXZWVrfSBjbGFzc05hbWU9XCJuZXh0LWJ1dHRvblwiPiZndDs8L2Rpdj5cbiAgICAgIDwvZGl2PiAqL31cblxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuY29udGFpbmVye1xuICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICBwYWRkaW5nLXRvcDogNXJlbTtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGZsZXgtZmxvdzogY29sdW1uO1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC53ZWVrLWhlYWRlcntcbiAgICAgICAgICBmb250LXNpemU6IDRyZW07XG4gICAgICAgICAgbWFyZ2luOiAwIDAgM3JlbSAwO1xuICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC53ZWVrLWhlYWRlciBoMXtcbiAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IDEwMDA7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC5leGVyY2lzZS1ncmlke1xuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAyNSUgNTAlIDI1JTtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgfVxuXG4gICAgICAgIC5wcmV2LWJ1dHRvbixcbiAgICAgICAgLm5leHQtYnV0dG9ue1xuICAgICAgICAgIGZvbnQtc2l6ZTogNXJlbTtcbiAgICAgICAgICBmb250LXdlaWdodDogMTAwO1xuICAgICAgICB9XG5cbiAgICAgICAgLnByZXYtYnV0dG9ue1xuICAgICAgICAgIGp1c3RpZnktc2VsZjogZW5kO1xuICAgICAgICAgIGFsaWduLXNlbGY6IGNlbnRlcjtcbiAgICAgICAgICBncmlkLWNvbHVtbjogMTtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLm5leHQtYnV0dG9ue1xuICAgICAgICAgIGFsaWduLXNlbGY6IGNlbnRlcjtcbiAgICAgICAgICBncmlkLWNvbHVtbjogMztcbiAgICAgICAgfVxuXG4gICAgICAgIC5kdW1teS1jb250YWluZXJ7XG4gICAgICAgICAgZ3JpZC1jb2x1bW46IDI7XG4gICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICBncmlkLXRlbXBsYXRlLXJvd3M6IHJlcGVhdCg3LCAxNC4yNSUpO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAuZGV0YWlscy1jb250YWluZXJ7XG4gICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnI7XG4gICAgICAgICAgbWFyZ2luOiAwIDAgM3JlbSAwO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAudGFnLWd1aWRle1xuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAzNSUgMTI1JTtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLnRhZy1saW5le1xuICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICB3aWR0aDogMXB4O1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNjM2MzYzM7XG4gICAgICAgICAgcGxhY2Utc2VsZjogZW5kO1xuICAgICAgICAgIG1hcmdpbi1yaWdodDogLjNyZW07XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC50YWctbGluZS1sYXN0e1xuICAgICAgICAgIGRpc3BsYXk6IGhpZGRlbjtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLmRheS1leGVyY2lzZXtcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMi41cmVtO1xuICAgICAgICAgIGFsaWduLXNlbGY6IGNlbnRlcjtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLmRheS1leGVyY2lzZSBoMXtcbiAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgZm9udC1zaXplOiAycmVtO1xuICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxMHB4O1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICBcbiAgICAgICAgLnRhZy1kb3R7XG4gICAgICAgICAgYWxpZ24tc2VsZjogc3RhcnQ7XG4gICAgICAgICAganVzdGlmeS1zZWxmOiBlbmQ7XG4gICAgICAgICAgaGVpZ2h0OiAxMHB4O1xuICAgICAgICAgIHdpZHRoOiAxMHB4O1xuICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5yZXN0e1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IGN5YW47XG4gICAgICAgIH1cbiAgICAgICAgLnJ1bntcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gICAgICAgIH1cbiAgICAgICAgLmNyb3Nze1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdztcbiAgICAgICAgfVxuICAgICAgICAuY3Jvc3NydW57XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogb3JhbmdlO1xuICAgICAgICB9XG4gICAgICAgIC5vdGhlcntcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9kaXY+XG4gICAgPC9MYXlvdXQ+XG4gIClcbn1cblxuLy8gSG9tZS5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoKSA9PiB7XG4vLyAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKCdodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL2RhaWx5Jylcbi8vICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKClcblxuLy8gICByZXR1cm4geyBkYXRhIH1cbi8vIH1cblxuZXhwb3J0IGRlZmF1bHQgSG9tZSJdfQ== */\n/*@ sourceURL=/Users/cor-eee/Projects/run-schedule/pages/index.js */")));
+  }, ".container.jsx-1357465073{height:100%;width:100%;padding-top:5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:sans-serif;}.week-header.jsx-1357465073{font-size:4rem;margin:0 0 3rem 0;padding:0;}.week-header.jsx-1357465073 h1.jsx-1357465073{height:100%;width:100%;margin:0;padding:0;font-weight:1000;}.exercise-grid.jsx-1357465073{display:grid;grid-template-columns:25% 50% 25%;width:100%;}.prev-button.jsx-1357465073,.next-button.jsx-1357465073{font-size:5rem;font-weight:100;}.prev-button.jsx-1357465073{justify-self:end;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;grid-column:1;}.next-button.jsx-1357465073{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;grid-column:3;}.dummy-container.jsx-1357465073{grid-column:2;display:grid;grid-template-rows:repeat(7,14.25%);}.details-container.jsx-1357465073{display:grid;grid-template-columns:1fr 1fr;margin:0 0 3rem 0;}.tag-guide.jsx-1357465073{display:grid;grid-template-rows:35% 125%;}.tag-line.jsx-1357465073{height:100%;width:1px;background-color:#c3c3c3;place-self:end;margin-right:.3rem;}.tag-line-last.jsx-1357465073{display:hidden;}.day-exercise.jsx-1357465073{margin-left:2.5rem;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}.day-exercise.jsx-1357465073 h1.jsx-1357465073{margin:0;font-size:2rem;line-height:10px;}.tag-dot.jsx-1357465073{-webkit-align-self:start;-ms-flex-item-align:start;align-self:start;justify-self:end;height:10px;width:10px;border-radius:100px;}.rest.jsx-1357465073{background-color:cyan;}.run.jsx-1357465073{background-color:red;}.cross.jsx-1357465073{background-color:yellow;}.crossrun.jsx-1357465073{background-color:orange;}.other.jsx-1357465073{background-color:black;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jb3ItZWVlL1Byb2plY3RzL3J1bi1zY2hlZHVsZS9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUE0RWtCLEFBR3VCLEFBV0csQUFNSCxBQVFDLEFBT0UsQUFLRSxBQU1DLEFBS0osQUFNRCxBQU1BLEFBS0QsQUFRRyxBQUlJLEFBS1YsQUFPUSxBQU9LLEFBR0QsQUFHRyxBQUdBLEFBR0QsU0F6QlIsR0FsRkosQUFpQkEsQUFnREQsQ0F4Q3dCLEFBNkJKLEFBTUYsQ0FaZixDQXJDSyxBQXFCRixBQXlDbEIsRUFwQ29CLEVBd0NBLEVBc0JwQixDQWpDMkIsQUE4QjNCLENBL0ZtQixBQWlCUixBQTBGWCxDQXpCbUIsQUFtQm5CLEFBR0EsR0F4RHVDLElBaEJ2QyxDQWRZLENBUEEsT0FWRyxDQTJEZixBQXVCQSxDQWhFbUIsQ0FQbkIsQUEwQ29CLElBN0JQLEFBeUNJLFdBeENqQixDQU5BLEVBbUNBLENBWXFCLENBbEJyQixLQXVDbUIsR0E5Q0gsVUEwQmhCLElBekJBLEFBOENjLEdBcERFLEVBd0NoQixPQWFhLEtBcERiLE1BcURzQixNQXpGSCxjQTBGbkIsaURBekZ5QixtR0FDSiw2RkFDSSx1QkFDekIiLCJmaWxlIjoiL1VzZXJzL2Nvci1lZWUvUHJvamVjdHMvcnVuLXNjaGVkdWxlL3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnXG5pbXBvcnQgZmV0Y2ggZnJvbSAnaXNvbW9ycGhpYy11bmZldGNoJ1xuaW1wb3J0IExheW91dCBmcm9tICcuLi9jb21wb25lbnRzL0xheW91dCdcblxuY29uc3QgSG9tZSA9ICh7IGRhdGEgfSwgcHJvcHMpID0+IHtcbiAgY29uc3QgW3dlZWtOdW0sIHNldFdlZWtOdW1dID0gdXNlU3RhdGUoMSlcblxuICBjb25zdCBuZXh0V2VlayA9ICgpID0+IHtcbiAgICBpZih3ZWVrTnVtIDwgMTIpe1xuICAgICAgc2V0V2Vla051bSh3ZWVrTnVtID0+IHdlZWtOdW0gKz0gMSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIHNldFdlZWtOdW0oMTIpO1xuICAgIH1cbiAgfVxuXG4gIGNvbnN0IHByZXZXZWVrID0gKCkgPT4ge1xuICAgIGlmKHdlZWtOdW0gPiAxKXtcbiAgICAgIHNldFdlZWtOdW0od2Vla051bSA9PiB3ZWVrTnVtIC09IDEpO1xuICAgIH0gZWxzZSB7XG4gICAgICBzZXRXZWVrTnVtKDEpXG4gICAgfVxuICB9XG5cbiAgcmV0dXJuKFxuICAgIDxMYXlvdXQ+XG5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuXG4gICAgICA8SGVhZD5cbiAgICAgICAgPHRpdGxlPldlZWsgMTwvdGl0bGU+XG4gICAgICAgIDxsaW5rIHJlbD1cImljb25cIiBocmVmPVwiXCIgLz5cbiAgICAgIDwvSGVhZD5cblxuICAgICAgPGgxPkhFTExPPC9oMT5cblxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIndlZWstaGVhZGVyXCI+XG4gICAgICAgIDxoMT57ZGF0YVtgd2VlayR7d2Vla051bX1gXS5sYWJlbH08L2gxPlxuICAgICAgPC9kaXY+XG5cblxuICAgICAgey8qIDxkaXYgY2xhc3NOYW1lPVwiZXhlcmNpc2UtZ3JpZFwiPlxuICAgICAgICA8ZGl2IG9uQ2xpY2s9e3ByZXZXZWVrfSBjbGFzc05hbWU9XCJwcmV2LWJ1dHRvblwiPiZsdDs8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkdW1teS1jb250YWluZXJcIj5cbiAgICAgICAgICB7XG4gICAgICAgICAgICBPYmplY3QudmFsdWVzKGRhdGFbYHdlZWske3dlZWtOdW19YF0pLnNsaWNlKDAsNykubWFwKChmb28sIGkpID0+IChcbiAgICAgICAgICAgICAgPGRpdiBrZXk9e2l9IGNsYXNzTmFtZT1cImRldGFpbHMtY29udGFpbmVyXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0YWctZ3VpZGVcIj5cbiAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgZm9vLnRhZyA9PT0gJ3Jlc3QnID8gXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGFnLWRvdCByZXN0XCI+PC9kaXY+IDogXG4gICAgICAgICAgICAgICAgICAgIGZvby50YWcgPT09ICdydW4nID9cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0YWctZG90IHJ1blwiPjwvZGl2PiA6XG4gICAgICAgICAgICAgICAgICAgIGZvby50YWcgPT09ICdjcm9zcycgPyBcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0YWctZG90IGNyb3NzXCI+PC9kaXY+IDpcbiAgICAgICAgICAgICAgICAgICAgZm9vLnRhZyA9PT0gJ2Nyb3NzcnVuJyA/IFxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZy1kb3QgY3Jvc3NydW5cIj48L2Rpdj4gOlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRhZy1kb3Qgb3RoZXJcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2kgPCA2ID8gJ3RhZy1saW5lJyA6ICd0YWctbGluZS1sYXN0J30+PC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZGF5LWV4ZXJjaXNlXCI+XG4gICAgICAgICAgICAgICAgICA8aDE+e2Zvby5sYWJlbH0gLSB7Zm9vLnJhY2VEYXl9PC9oMT5cbiAgICAgICAgICAgICAgICAgIDxwPntmb28uZXhlcmNpc2V9PC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICkpXG4gICAgICAgICAgfVxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBvbkNsaWNrPXtuZXh0V2Vla30gY2xhc3NOYW1lPVwibmV4dC1idXR0b25cIj4mZ3Q7PC9kaXY+XG4gICAgICA8L2Rpdj4gKi99XG5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgLmNvbnRhaW5lcntcbiAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgcGFkZGluZy10b3A6IDVyZW07XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICBmbGV4LWZsb3c6IGNvbHVtbjtcbiAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAud2Vlay1oZWFkZXJ7XG4gICAgICAgICAgZm9udC1zaXplOiA0cmVtO1xuICAgICAgICAgIG1hcmdpbjogMCAwIDNyZW0gMDtcbiAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAud2Vlay1oZWFkZXIgaDF7XG4gICAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiAxMDAwO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAuZXhlcmNpc2UtZ3JpZHtcbiAgICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMjUlIDUwJSAyNSU7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIH1cblxuICAgICAgICAucHJldi1idXR0b24sXG4gICAgICAgIC5uZXh0LWJ1dHRvbntcbiAgICAgICAgICBmb250LXNpemU6IDVyZW07XG4gICAgICAgICAgZm9udC13ZWlnaHQ6IDEwMDtcbiAgICAgICAgfVxuXG4gICAgICAgIC5wcmV2LWJ1dHRvbntcbiAgICAgICAgICBqdXN0aWZ5LXNlbGY6IGVuZDtcbiAgICAgICAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG4gICAgICAgICAgZ3JpZC1jb2x1bW46IDE7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC5uZXh0LWJ1dHRvbntcbiAgICAgICAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG4gICAgICAgICAgZ3JpZC1jb2x1bW46IDM7XG4gICAgICAgIH1cblxuICAgICAgICAuZHVtbXktY29udGFpbmVye1xuICAgICAgICAgIGdyaWQtY29sdW1uOiAyO1xuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiByZXBlYXQoNywgMTQuMjUlKTtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLmRldGFpbHMtY29udGFpbmVye1xuICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyO1xuICAgICAgICAgIG1hcmdpbjogMCAwIDNyZW0gMDtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgLnRhZy1ndWlkZXtcbiAgICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICAgIGdyaWQtdGVtcGxhdGUtcm93czogMzUlIDEyNSU7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC50YWctbGluZXtcbiAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgd2lkdGg6IDFweDtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjYzNjM2MzO1xuICAgICAgICAgIHBsYWNlLXNlbGY6IGVuZDtcbiAgICAgICAgICBtYXJnaW4tcmlnaHQ6IC4zcmVtO1xuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICAudGFnLWxpbmUtbGFzdHtcbiAgICAgICAgICBkaXNwbGF5OiBoaWRkZW47XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC5kYXktZXhlcmNpc2V7XG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDIuNXJlbTtcbiAgICAgICAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIC5kYXktZXhlcmNpc2UgaDF7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIGZvbnQtc2l6ZTogMnJlbTtcbiAgICAgICAgICBsaW5lLWhlaWdodDogMTBweDtcbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgXG4gICAgICAgIC50YWctZG90e1xuICAgICAgICAgIGFsaWduLXNlbGY6IHN0YXJ0O1xuICAgICAgICAgIGp1c3RpZnktc2VsZjogZW5kO1xuICAgICAgICAgIGhlaWdodDogMTBweDtcbiAgICAgICAgICB3aWR0aDogMTBweDtcbiAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMDBweDtcbiAgICAgICAgfVxuICAgICAgICAucmVzdHtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjeWFuO1xuICAgICAgICB9XG4gICAgICAgIC5ydW57XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xuICAgICAgICB9XG4gICAgICAgIC5jcm9zc3tcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7XG4gICAgICAgIH1cbiAgICAgICAgLmNyb3NzcnVue1xuICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IG9yYW5nZTtcbiAgICAgICAgfVxuICAgICAgICAub3RoZXJ7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvZGl2PlxuICAgIDwvTGF5b3V0PlxuICApXG59XG5cbi8vIEhvbWUuZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgKCkgPT4ge1xuLy8gICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaCgnaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS9kYWlseScpXG4vLyAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpXG5cbi8vICAgcmV0dXJuIHsgZGF0YSB9XG4vLyB9XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTdGF0aWNQcm9wcygpe1xuICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaCgnaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS9kYWlseScpXG4gIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpXG5cbiAgcmV0dXJue1xuICAgIHByb3BzOiB7XG4gICAgICBkYXRhXG4gICAgfVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEhvbWUiXX0= */\n/*@ sourceURL=/Users/cor-eee/Projects/run-schedule/pages/index.js */")));
 }; // Home.getInitialProps = async () => {
 //   const res = await fetch('http://localhost:3000/api/daily')
 //   const data = await res.json()
@@ -1904,11 +1923,20 @@ const Home = ({
 // }
 
 
+async function getStaticProps() {
+  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()('http://localhost:3000/api/daily');
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  };
+}
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -1917,61 +1945,6 @@ const Home = ({
 
 module.exports = __webpack_require__(/*! /Users/cor-eee/Projects/run-schedule/pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/define-property":
-/*!************************************************************!*\
-  !*** external "core-js/library/fn/object/define-property" ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/define-property");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/get-own-property-descriptor":
-/*!************************************************************************!*\
-  !*** external "core-js/library/fn/object/get-own-property-descriptor" ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol":
-/*!********************************************!*\
-  !*** external "core-js/library/fn/symbol" ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol/iterator":
-/*!*****************************************************!*\
-  !*** external "core-js/library/fn/symbol/iterator" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "core-js/library/fn/weak-map":
-/*!**********************************************!*\
-  !*** external "core-js/library/fn/weak-map" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 

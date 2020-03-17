@@ -36,9 +36,9 @@ const Home = ({ data }, props) => {
       <h1>HELLO</h1>
 
 
-      {/* <div className="week-header">
+      <div className="week-header">
         <h1>{data[`week${weekNum}`].label}</h1>
-      </div> */}
+      </div>
 
 
       {/* <div className="exercise-grid">
@@ -200,5 +200,16 @@ const Home = ({ data }, props) => {
 
 //   return { data }
 // }
+
+export async function getStaticProps(){
+  const res = await fetch('http://localhost:3000/api/daily')
+  const data = await res.json()
+
+  return{
+    props: {
+      data
+    }
+  }
+}
 
 export default Home
