@@ -3,8 +3,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 import Layout from '../components/Layout'
+import useSWR from 'swr'
 
 const Home = ({ data }, props) => {
+  const { plans } = useSWR('/api/daily', fetch)
+
+  console.log(plans);
   const [weekNum, setWeekNum] = useState(1)
 
   const nextWeek = () => {
@@ -202,7 +206,7 @@ const Home = ({ data }, props) => {
 // }
 
 export async function getServerSideProps(){
-  const res = await fetch('http://localhost:3000/api/daily')
+  const res = await fetch('https://running-planner.now.sh/api/daily')
   const data = await res.json()
 
   return{

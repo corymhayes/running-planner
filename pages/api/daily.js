@@ -12,6 +12,7 @@ handler.use(middleware)
 handler.get(async (req, res) => {
   let doc = {}
   doc = await req.db.collection('half-novice-1').findOne()
+  
   return (
     await res.json(doc)
   )
