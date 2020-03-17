@@ -33,10 +33,12 @@ const Home = ({ data }, props) => {
         <link rel="icon" href="" />
       </Head>
 
+      <h1>HELLO</h1>
 
-      <div className="week-header">
+
+      {/* <div className="week-header">
         <h1>{data[`week${weekNum}`].label}</h1>
-      </div>
+      </div> */}
 
 
       {/* <div className="exercise-grid">
@@ -192,11 +194,11 @@ const Home = ({ data }, props) => {
   )
 }
 
-Home.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/daily')
-  const data = await res.json()
-  
-  return { data }
-}
+// Home.getInitialProps = async () => {
+//   const res = await fetch('http://localhost:3000/api/daily')
+//   const data = await res.json()
+
+//   return { data }
+// }
 
 export default Home
