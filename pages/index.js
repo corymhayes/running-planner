@@ -39,7 +39,7 @@ const Home = ({ data }, props) => {
       </div>
 
 
-      <div className="exercise-grid">
+      {/* <div className="exercise-grid">
         <div onClick={prevWeek} className="prev-button">&lt;</div>
         <div className="dummy-container">
           {
@@ -70,7 +70,7 @@ const Home = ({ data }, props) => {
           }
         </div>
         <div onClick={nextWeek} className="next-button">&gt;</div>
-      </div>
+      </div> */}
 
       <style jsx>{`
         .container{
@@ -194,8 +194,9 @@ const Home = ({ data }, props) => {
 
 Home.getInitialProps = async () => {
   const res = await fetch('http://localhost:3000/api/daily')
-  const json = await res.json()
-  return { data: json }
+  const data = await res.json()
+  
+  return { data }
 }
 
 export default Home

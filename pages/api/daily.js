@@ -15,17 +15,17 @@ handler.get(async (req, res) => {
   res.json(doc)
 })
 
-handler.post(async (req, res) => {
-  const data = req.body
-  let newSchedule = schedule(scaffold(data))
+// handler.post(async (req, res) => {
+//   const data = req.body
+//   let newSchedule = schedule(scaffold(data))
 
-  try{
-    req.db.collection('half-novice-1').insertOne(
-      { _id: ObjectID(), ...newSchedule }
-    )
-  } catch (e) {
-    console.log(e)
-  }
-})
+//   try{
+//     req.db.collection('half-novice-1').insertOne(
+//       { _id: ObjectID(), ...newSchedule }
+//     )
+//   } catch (e) {
+//     console.log(e)
+//   }
+// })
 
 export default handler
