@@ -1,26 +1,26 @@
 <script lang="ts">
-	import { db } from '$lib/db/db';
-	import { initial_data } from '$lib/db/data';
-	import { getDay, setDay } from '$lib/utils';
+	import { db } from "$lib/db/db";
+	import { initial_data } from "$lib/db/data";
+	import { getDay, setDay } from "$lib/utils";
 
-	import * as Card from '$lib/components/ui/card';
-	import * as RadioGroup from '$lib/components/ui/radio-group';
-	import * as Select from '$lib/components/ui/select';
-	import * as Table from '$lib/components/ui/table';
-	import * as ToggleGroup from '$lib/components/ui/toggle-group';
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { ScrollArea } from '$lib/components/ui/scroll-area';
+	import * as Card from "$lib/components/ui/card";
+	import * as RadioGroup from "$lib/components/ui/radio-group";
+	import * as Select from "$lib/components/ui/select";
+	import * as Table from "$lib/components/ui/table";
+	import * as ToggleGroup from "$lib/components/ui/toggle-group";
+	import { Button } from "$lib/components/ui/button";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { ScrollArea } from "$lib/components/ui/scroll-area";
 
-	import { Cross2, Pencil1 } from 'svelte-radix';
-	import arrowleft from '$lib/icons/arrow-left.svg';
+	import { Cross2, Pencil1 } from "svelte-radix";
+	import arrowleft from "$lib/icons/arrow-left.svg";
 
 	let form_data = $state(structuredClone(initial_data));
 	let loaded_id: number | undefined | null = $state(null);
 	let value = $state([]);
-	let selectedType: string = $state('');
-	let measurement = $state('');
+	let selectedType: string = $state("");
+	let measurement = $state("");
 	let innerWidth = $state(0);
 
 	let { all_plans, all_exercises, unique_weeks, load_all_plans } = $props();
@@ -59,9 +59,9 @@
 	let reset_form = () => {
 		loaded_id = null;
 		value = [];
-		selectedType = '';
+		selectedType = "";
 		form_data.distance = null;
-		measurement = '';
+		measurement = "";
 	};
 
 	async function load_day(id: number) {
@@ -145,7 +145,7 @@
 							onSelectedChange={(v) => (selectedType = v?.value)}
 						>
 							<Select.Trigger>
-								<Select.Value placeholder={selectedType ? selectedType : ''} />
+								<Select.Value placeholder={selectedType ? selectedType : ""} />
 							</Select.Trigger>
 							<Select.Content>
 								{#if all_exercises.length === 0}

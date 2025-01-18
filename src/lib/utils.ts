@@ -1,7 +1,9 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-import { cubicOut } from 'svelte/easing';
-import type { TransitionConfig } from 'svelte/transition';
+// SHADCN-SVELTE
+
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+import { cubicOut } from "svelte/easing";
+import type { TransitionConfig } from "svelte/transition";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -19,7 +21,7 @@ export const flyAndScale = (
 	params: FlyAndScaleParams = { y: -8, x: 0, start: 0.95, duration: 150 }
 ): TransitionConfig => {
 	const style = getComputedStyle(node);
-	const transform = style.transform === 'none' ? '' : style.transform;
+	const transform = style.transform === "none" ? "" : style.transform;
 
 	const scaleConversion = (valueA: number, scaleA: [number, number], scaleB: [number, number]) => {
 		const [minA, maxA] = scaleA;
@@ -35,7 +37,7 @@ export const flyAndScale = (
 		return Object.keys(style).reduce((str, key) => {
 			if (style[key] === undefined) return str;
 			return str + `${key}:${style[key]};`;
-		}, '');
+		}, "");
 	};
 
 	return {
@@ -55,30 +57,31 @@ export const flyAndScale = (
 	};
 };
 
+// MINE
 export const getDay = (day: number): string => {
-	let day_string = '';
+	let day_string = "";
 
 	switch (day) {
 		case 0:
-			day_string = 'Mon';
+			day_string = "Mon";
 			break;
 		case 1:
-			day_string = 'Tue';
+			day_string = "Tue";
 			break;
 		case 2:
-			day_string = 'Wed';
+			day_string = "Wed";
 			break;
 		case 3:
-			day_string = 'Thu';
+			day_string = "Thu";
 			break;
 		case 4:
-			day_string = 'Fri';
+			day_string = "Fri";
 			break;
 		case 5:
-			day_string = 'Sat';
+			day_string = "Sat";
 			break;
 		case 6:
-			day_string = 'Sun';
+			day_string = "Sun";
 			break;
 	}
 
@@ -89,25 +92,25 @@ export const setDay = (day: string): number => {
 	let day_num = 0;
 
 	switch (day) {
-		case 'Mon':
+		case "Mon":
 			day_num = 0;
 			break;
-		case 'Tue':
+		case "Tue":
 			day_num = 1;
 			break;
-		case 'Wed':
+		case "Wed":
 			day_num = 2;
 			break;
-		case 'Thu':
+		case "Thu":
 			day_num = 3;
 			break;
-		case 'Fri':
+		case "Fri":
 			day_num = 4;
 			break;
-		case 'Sat':
+		case "Sat":
 			day_num = 5;
 			break;
-		case 'Sun':
+		case "Sun":
 			day_num = 6;
 			break;
 	}

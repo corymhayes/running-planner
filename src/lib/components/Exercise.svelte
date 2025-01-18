@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { db, type Exercise } from '$lib/db/db';
-	let { plan, day_done } = $props();
-
+	import { db, type Exercise } from "$lib/db/db";
+	let { plan, day_done, settings } = $props();
 	let all_exercises: Exercise[] = $state([]);
 
 	const load_all_exercises = async () => {
-		all_exercises = await db.exercise.orderBy('name').toArray();
+		all_exercises = await db.exercise.orderBy("name").toArray();
 	};
-
-	$inspect(plan);
 
 	$effect(() => {
 		load_all_exercises();
@@ -26,14 +23,15 @@
 			{/if}
 		{/each}
 		<div class="font-base text-thin col-start-2 self-center justify-self-start font-medium">
-			<span class={plan?.completed ? 'line-through' : null}>{plan?.exercise}</span>
+			<span class={plan?.completed ? "line-through" : null}>{plan?.exercise}</span>
 		</div>
 		<div class="text-md col-start-2 row-start-2 justify-self-start">
-			{#if plan?.measurement === 'distance'}
+			{#if plan?.measurement === "distance"}
 				<span class="text-sm">
-					{plan?.distance} km
+					{plan?.distance}
+					{settings.units}
 				</span>
-			{:else if plan?.measurement === 'duration'}
+			{:else if plan?.measurement === "duration"}
 				<span class="text-sm">
 					{plan?.distance} min
 				</span>
@@ -51,14 +49,15 @@
 			{/if}
 		{/each}
 		<div class="font-base text-thin col-start-2 self-center justify-self-start font-medium">
-			<span class={plan?.completed ? 'line-through' : null}>{plan?.exercise}</span>
+			<span class={plan?.completed ? "line-through" : null}>{plan?.exercise}</span>
 		</div>
 		<div class="text-md col-start-2 row-start-2 justify-self-start">
-			{#if plan?.measurement === 'distance'}
+			{#if plan?.measurement === "distance"}
 				<span class="text-sm">
-					{plan?.distance} km
+					{plan?.distance}
+					{localStorage.getItem("units")}
 				</span>
-			{:else if plan?.measurement === 'duration'}
+			{:else if plan?.measurement === "duration"}
 				<span class="text-sm">
 					{plan?.distance} min
 				</span>

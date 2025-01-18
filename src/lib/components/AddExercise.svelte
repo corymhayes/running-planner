@@ -1,33 +1,23 @@
 <script lang="ts">
-	import { db } from '$lib/db/db';
-	import type { Exercise, Plan } from '$lib/db/db';
+	import { db } from "$lib/db/db";
 
-	import * as Card from '$lib/components/ui/card';
-	import { Button } from '$lib/components/ui/button';
-	import { Label } from '$lib/components/ui/label';
-	import { Input } from '$lib/components/ui/input';
+	import * as Card from "$lib/components/ui/card";
+	import { Button } from "$lib/components/ui/button";
+	import { Label } from "$lib/components/ui/label";
+	import { Input } from "$lib/components/ui/input";
 
-	import { Cross2, Pencil1 } from 'svelte-radix';
-	import arrowleft from '$lib/icons/arrow-left.svg';
-	import pencil from '$lib/icons/pencil.svg';
-	import trash from '$lib/icons/trash.svg';
-	import { colors } from '$lib/colors.json';
+	import arrowleft from "$lib/icons/arrow-left.svg";
+	import pencil from "$lib/icons/pencil.svg";
+	import trash from "$lib/icons/trash.svg";
+	import { colors } from "$lib/colors.json";
 
-	let all_exercises: Exercise[] = $state([]);
-	let exercise_color = $state('');
-	let exercise_name = $state('');
+	let { all_exercises, load_all_exercises } = $props();
+	let exercise_color = $state("");
+	let exercise_name = $state("");
 	let loaded_id = $state(0);
 	let innerWidth = $state(0);
 
-	const load_all_plans = async () => {
-		all_exercises = await db.exercise.orderBy('name').toArray();
-	};
-
-	$effect(() => {
-		load_all_plans();
-	});
-
-	let save = async () => {
+	const save = async () => {
 		let name = $state.snapshot(exercise_name);
 		let color = $state.snapshot(exercise_color);
 
@@ -48,13 +38,9 @@
 	};
 
 	const reset_form = async () => {
-		exercise_name = '';
-		exercise_color = '';
+		exercise_name = "";
+		exercise_color = "";
 		loaded_id = 0;
-	};
-
-	const load_all_exercises = async () => {
-		all_exercises = await db.exercise.orderBy('name').toArray();
 	};
 
 	const edit_exercise = async (id: number) => {
@@ -67,10 +53,10 @@
 		}
 	};
 
-	async function delete_exercise(id: number) {
+	const delete_exercise = async (id: number) => {
 		await db.exercise.delete(id);
 		load_all_exercises();
-	}
+	};
 </script>
 
 <svelte:window bind:innerWidth />
@@ -140,28 +126,18 @@
 							></div>
 							<h1 class="text-sm">{exercise.name}</h1>
 
-							<!-- <img
+							<img
 								src={pencil}
-								class="h-4 w-4 cursor-pointer justify-self-end"
+								class="h-5 w-5 cursor-pointer justify-self-end"
 								onclick={() => edit_exercise(exercise.id)}
 								alt="edit exercise"
 							/>
 
 							<img
 								src={trash}
-								class="h-4 w-4 cursor-pointer justify-self-end"
+								class="h-5 w-5 cursor-pointer justify-self-end"
 								onclick={() => delete_exercise(exercise.id)}
 								alt="delete exercise"
-							/> -->
-							<Pencil1
-								class="cursor-pointer justify-self-end text-stone-700"
-								size="18"
-								onclick={() => edit_exercise(exercise.id)}
-							/>
-							<Cross2
-								class="cursor-pointer justify-self-end text-stone-700"
-								size="18"
-								onclick={() => delete_exercise(exercise.id)}
 							/>
 						</div>
 					{/each}
